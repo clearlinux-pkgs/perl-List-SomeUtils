@@ -1,5 +1,8 @@
 Revision history for Perl extension List-SomeUtils
 
+0.53     2016-08-14
+    - Replaced Exporter::Tiny with Exporter.
+
 0.52     2016-05-06
     - Updated to latest ExtUtils::HasCompiler and simplified dynamic
       prereqs. Patch by Karen Etheridge. GitHub #3.
