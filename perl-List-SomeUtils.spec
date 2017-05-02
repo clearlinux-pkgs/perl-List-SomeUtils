@@ -4,7 +4,7 @@
 #
 Name     : perl-List-SomeUtils
 Version  : 0.53
-Release  : 2
+Release  : 3
 URL      : http://search.cpan.org/CPAN/authors/id/D/DR/DROLSKY/List-SomeUtils-0.53.tar.gz
 Source0  : http://search.cpan.org/CPAN/authors/id/D/DR/DROLSKY/List-SomeUtils-0.53.tar.gz
 Summary  : 'Provide the stuff missing in List::Util'
