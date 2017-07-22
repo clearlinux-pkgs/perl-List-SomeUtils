@@ -4,17 +4,15 @@
 #
 Name     : perl-List-SomeUtils
 Version  : 0.54
-Release  : 4
+Release  : 5
 URL      : http://search.cpan.org/CPAN/authors/id/D/DR/DROLSKY/List-SomeUtils-0.54.tar.gz
 Source0  : http://search.cpan.org/CPAN/authors/id/D/DR/DROLSKY/List-SomeUtils-0.54.tar.gz
 Summary  : 'Provide the stuff missing in List::Util'
 Group    : Development/Tools
-License  : Artistic-1.0-Perl
+License  : Artistic-1.0-Perl GPL-1.0
 Requires: perl-List-SomeUtils-doc
 BuildRequires : perl(List::SomeUtils::XS)
 BuildRequires : perl(Module::Implementation)
-BuildRequires : perl(Module::Runtime)
-BuildRequires : perl(Try::Tiny)
 
 %description
 # NAME
@@ -46,13 +44,6 @@ else
 ./Build
 fi
 
-%check
-export LANG=C
-export http_proxy=http://127.0.0.1:9/
-export https_proxy=http://127.0.0.1:9/
-export no_proxy=localhost,127.0.0.1,0.0.0.0
-make TEST_VERBOSE=1 test
-
 %install
 rm -rf %{buildroot}
 if test -f Makefile.PL; then
@@ -67,8 +58,8 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/site_perl/5.24.0/List/SomeUtils.pm
-/usr/lib/perl5/site_perl/5.24.0/List/SomeUtils/PP.pm
+/usr/lib/perl5/site_perl/5.26.0/List/SomeUtils.pm
+/usr/lib/perl5/site_perl/5.26.0/List/SomeUtils/PP.pm
 
 %files doc
 %defattr(-,root,root,-)
