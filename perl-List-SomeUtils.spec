@@ -4,7 +4,7 @@
 #
 Name     : perl-List-SomeUtils
 Version  : 0.56
-Release  : 13
+Release  : 14
 URL      : https://www.cpan.org/authors/id/D/DR/DROLSKY/List-SomeUtils-0.56.tar.gz
 Source0  : https://www.cpan.org/authors/id/D/DR/DROLSKY/List-SomeUtils-0.56.tar.gz
 Summary  : 'Provide the stuff missing in List::Util'
