@@ -4,10 +4,10 @@
 #
 Name     : perl-List-SomeUtils
 Version  : 0.56
-Release  : 18
+Release  : 19
 URL      : https://www.cpan.org/authors/id/D/DR/DROLSKY/List-SomeUtils-0.56.tar.gz
 Source0  : https://www.cpan.org/authors/id/D/DR/DROLSKY/List-SomeUtils-0.56.tar.gz
-Summary  : 'Provide the stuff missing in List::Util'
+Summary  : Perl package that combines List::Util and List::MoreUtils in one bite-sized package
 Group    : Development/Tools
 License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
 Requires: perl-List-SomeUtils-license = %{version}-%{release}
@@ -27,6 +27,7 @@ version 0.56
 Summary: dev components for the perl-List-SomeUtils package.
 Group: Development
 Provides: perl-List-SomeUtils-devel = %{version}-%{release}
+Requires: perl-List-SomeUtils = %{version}-%{release}
 
 %description dev
 dev components for the perl-List-SomeUtils package.
