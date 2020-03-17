@@ -4,12 +4,13 @@
 #
 Name     : perl-List-SomeUtils
 Version  : 0.58
-Release  : 21
+Release  : 22
 URL      : https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/List-SomeUtils-0.58.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/List-SomeUtils-0.58.tar.gz
 Summary  : 'Provide the stuff missing in List::Util'
 Group    : Development/Tools
-License  : Artistic-1.0-Perl
+License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
+Requires: perl-List-SomeUtils-license = %{version}-%{release}
 Requires: perl-List-SomeUtils-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 BuildRequires : perl(List::SomeUtils::XS)
@@ -32,6 +33,14 @@ Requires: perl-List-SomeUtils = %{version}-%{release}
 
 %description dev
 dev components for the perl-List-SomeUtils package.
+
+
+%package license
+Summary: license components for the perl-List-SomeUtils package.
+Group: Default
+
+%description license
+license components for the perl-List-SomeUtils package.
 
 
 %package perl
@@ -69,6 +78,8 @@ make TEST_VERBOSE=1 test
 
 %install
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/perl-List-SomeUtils
+cp %{_builddir}/List-SomeUtils-0.58/LICENSE %{buildroot}/usr/share/package-licenses/perl-List-SomeUtils/bf1312fa0b1f788c5e6b2a0f6d9e19fb503a0bbc
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -87,7 +98,11 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 /usr/share/man/man3/List::SomeUtils.3
 /usr/share/man/man3/List::SomeUtils::PP.3
 
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/perl-List-SomeUtils/bf1312fa0b1f788c5e6b2a0f6d9e19fb503a0bbc
+
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.1/List/SomeUtils.pm
-/usr/lib/perl5/vendor_perl/5.30.1/List/SomeUtils/PP.pm
+/usr/lib/perl5/vendor_perl/5.30.2/List/SomeUtils.pm
+/usr/lib/perl5/vendor_perl/5.30.2/List/SomeUtils/PP.pm
