@@ -4,7 +4,7 @@
 #
 Name     : perl-List-SomeUtils
 Version  : 0.58
-Release  : 23
+Release  : 24
 URL      : https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/List-SomeUtils-0.58.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/List-SomeUtils-0.58.tar.gz
 Summary  : 'Provide the stuff missing in List::Util'
@@ -104,5 +104,5 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.3/List/SomeUtils.pm
-/usr/lib/perl5/vendor_perl/5.30.3/List/SomeUtils/PP.pm
+/usr/lib/perl5/vendor_perl/5.32.1/List/SomeUtils.pm
+/usr/lib/perl5/vendor_perl/5.32.1/List/SomeUtils/PP.pm
