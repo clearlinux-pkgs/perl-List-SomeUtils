@@ -4,7 +4,7 @@
 #
 Name     : perl-List-SomeUtils
 Version  : 0.58
-Release  : 26
+Release  : 27
 URL      : https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/List-SomeUtils-0.58.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/List-SomeUtils-0.58.tar.gz
 Summary  : 'Provide the stuff missing in List::Util'
